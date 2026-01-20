@@ -1,0 +1,300 @@
+body{
+    background-color: #ffffff;
+}
+
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 200px;
+    background: white;
+    border: 2px solid black;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    padding: 20px;
+    line-height: 14px;
+    box-shadow: 0 3px 5px rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  .back {
+    
+    margin-top: 160px;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    
+  }
+  .back:hover{
+    letter-spacing: 10px;
+    color: blue;
+  }
+
+#color-box{
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    position: absolute;
+    left: 2%;
+    top: 13%; 
+    user-select: none;
+    z-index: 101;
+    cursor: pointer;
+}
+#color-box:hover{
+    letter-spacing: 3px;
+    color: blue;
+}
+#colorPicker {
+ border-radius: 100%;
+ width: 50px;
+ height: 50px;
+  overflow: hidden;
+  border: none;
+  z-index: 101;
+  background-color: rgb(255, 255, 255);
+  color: blue;
+  }
+  #colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+    
+  }
+  #colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%; /* Make the swatch itself round */
+    background-color: rgb(0, 0, 0);
+    
+  }
+  #colorPicker::-webkit-color-swatch:hover {
+    border: none;
+    border-radius: 50%; /* Make the swatch itself round */
+    background-color: blue;
+    
+  }
+
+  #saveBtn {
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    background-color: white;
+    letter-spacing: 1px;
+    border: solid 1px black;
+  }
+  
+  #saveBtn:hover {
+    letter-spacing: 10px;
+    color: blue;
+    border: solid 1px blue;
+  }
+
+.undo{
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 15px;
+    z-index: 100;
+    position: fixed;
+    top: 97.5%;
+    left: 50%;
+    color: rgb(0, 0, 0);
+    transform: translateX(-50%); /* Center the div horizontally */
+  animation: bounce 1.3s ease-in-out infinite;
+}
+.undo:hover{
+    word-spacing: 13px;
+   
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateX(-50%) translateY(0); /* Start at the normal position */
+    }
+    50% {
+      transform: translateX(-50%) translateY(-10px); /* Move up slightly */
+    }
+    100% {
+      transform: translateX(-50%) translateY(0); /* Return to the normal position */
+    }
+  }
+
+.cursor-solid{
+    cursor: crosshair;
+}
+.button-group{
+    width: 99vw;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);;
+    grid-template-rows: repeat(1fr,1fr);
+    z-index: 100;
+    padding: none;
+}
+.button.active {
+    background-color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.button{
+    position: relative;
+    
+    height: 50px;
+    box-shadow: none;
+    font-size: 100px;
+    border: solid 1px black;
+    background-color: #ffffff;
+    
+    font-family: lores-9-wide, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+    line-height: 45px;
+    font-size: 25px;
+    color: black;
+    box-shadow: none;
+   
+    transition: all 0.1s;
+}
+
+.button:hover {
+    letter-spacing: 15px;
+   color: blue;
+}
+
+#reset{
+    z-index: 100;
+  
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+line-height: 45px;
+grid-row: 2/2;
+grid-column: 6/6;
+}
+
+
+
+#b1{
+    font-family: "cofo-sans-pixel", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+
+transition: all 0.1s;
+grid-row: 2/2;
+grid-column: 2/3;
+}
+#b1:hover {
+    background-color: #ffffffb1; /* Darker blue on hover */
+   color: blue;
+}
+
+#b2{
+    font-family: bitcount-mono-single-square, sans-serif;
+font-weight: 600;
+font-style: normal;
+font-size: 25px;
+grid-row: 2/2;
+grid-column: 1/1;
+
+}
+
+#b3{
+    font-family: bitcount-mono-single-plus, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 25px;
+grid-row: 2/2;
+grid-column: 3/3;
+}
+
+#b4{
+    font-family: bitcount-mono-single-circle, sans-serif;
+font-weight: 600;
+font-style: normal;
+grid-row: 2/2;
+grid-column: 4/4;
+font-size: 20px;
+ }
+
+#b5{
+    font-family: bitcount-mono-single-line-sq, sans-serif;
+font-weight: 500;
+font-style: normal;
+font-size: 25px;
+grid-row: 2/2;
+grid-column: 5/5;
+}
+    
+.fill{
+font-family: cofo-sans-pixel, sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 20px;
+grid-row: 1/1;
+grid-column: 1/1;
+background-color: rgb(255, 106, 193);
+justify-self: left;
+
+color: rgb(255, 255, 255);
+}
+
+.name{
+    font-family: cofo-sans-pixel, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    grid-row: 1/1;
+    grid-column: 3/5;
+    background-color: rgb(0, 0, 0);
+    justify-self: center;
+    align-self: center;
+    color: white;
+    cursor: pointer;
+}
+
+.name:hover{
+    word-spacing: 10px;
+    letter-spacing: 3px;
+}
+
+.class{
+    font-family: cofo-sans-pixel, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    grid-row: 1/1;
+    grid-column: 6/6;
+    background-color: rgb(255, 187, 0);
+    justify-self: right;
+    align-self: center;
+    color: white;
+}
+
+.cursor-solid {
+    cursor: url(images/solidCursor.pdf), auto;
+
+  }
+ 
