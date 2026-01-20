@@ -1,4 +1,4 @@
-let grid = []; // array of Cell objects
+let grid = []; 
 let history = []
 let cols = 4;
 let rows = 4;
