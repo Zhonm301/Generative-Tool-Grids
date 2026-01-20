@@ -80,7 +80,7 @@ body{
   }
   #colorPicker::-webkit-color-swatch:hover {
     border: none;
-    border-radius: 50%; /* Make the swatch itself round */
+    border-radius: 50%; 
     background-color: blue;
     
   }
